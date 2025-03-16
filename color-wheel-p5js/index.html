@@ -10,26 +10,110 @@
 			rel="stylesheet"
 			href="styles.css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/addons/p5.sound.min.js"></script>
 	</head>
 	<body>
-		<main></main>
-		<script src="sketch.js"></script>
+		<div class="main-container">
+			<h1 class="title">Color Wheel Theory</h1>
+			<div class="widget-container">
+				<div class="left-container">
+					<main id="color-wheel"></main>
 
-		<div class="color-info">
-			<div class="color-sample">
-				<p>Selected Color</p>
-				<div
-					id="selectedColorBox"
-					class="color-box"></div>
-			</div>
-
-			<div class="color-sample">
-				<p>Complementary Color</p>
-				<div
-					id="complementaryColorBox"
-					class="color-box"></div>
+					<div class="select-wrapper combinations">
+						<label for="combinations"> Color Combinations</label>
+						<select
+							id="combinations"
+							name="combinations">
+							<option value="complementary">Complementary</option>
+						</select>
+					</div>
+				</div>
+				<div class="right-container">
+					<div class="configuration-container">
+						<div class="accordion active">
+							<div class="accordion-heading">
+								<div
+									id="selectedColorBox"
+									class="color-box"></div>
+								<p>Selected Color</p>
+							</div>
+							<div class="accordion-content">
+								<div class="color-value">
+									<span>HEX</span>
+									<input
+										id="selectedColorHex"
+										type="text"
+										value="FFFFFF"
+										disabled />
+								</div>
+								<div class="color-value">
+									<span>RGB</span>
+									<input
+										id="selectedColorRgb"
+										type="text"
+										value="FFFFFF"
+										disabled />
+								</div>
+								<div class="color-value">
+									<span>HSL</span>
+									<input
+										id="selectedColorHsl"
+										type="text"
+										value="FFFFFF"
+										disabled />
+								</div>
+								<div class="color-value">
+									<span>HSB</span>
+									<input
+										id="selectedColorHsb"
+										type="text"
+										value="FFFFFF"
+										disabled />
+								</div>
+							</div>
+						</div>
+						<div class="accordion">
+							<div class="accordion-heading">
+								<div
+									id="complementaryColorBox"
+									class="color-box"></div>
+								<p>Selected Color</p>
+							</div>
+							<div class="accordion-content">
+								<div class="color-value">
+									<span>HEX</span>
+									<input
+										type="text"
+										value="FFFFFF"
+										disabled />
+								</div>
+								<div class="color-value">
+									<span>RGB</span>
+									<input
+										type="text"
+										value="FFFFFF"
+										disabled />
+								</div>
+								<div class="color-value">
+									<span>HSL</span>
+									<input
+										type="text"
+										value="FFFFFF"
+										disabled />
+								</div>
+								<div class="color-value">
+									<span>HSB</span>
+									<input
+										type="text"
+										value="FFFFFF"
+										disabled />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
+		<script src="script.js"></script>
+		<script src="sketch.js"></script>
 	</body>
 </html>
